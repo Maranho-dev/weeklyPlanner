@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fundo geral preto -->
+    <color name="background">#121212</color>
+
+    <!-- Cores pasteis para os blocos dos dias -->
+    <color name="pastel_monday">#FFD7D9</color>    <!-- rosa claro -->
+    <color name="pastel_tuesday">#D7E8FF</color>   <!-- azul claro -->
+    <color name="pastel_wednesday">#D7FFD7</color> <!-- verde claro -->
+    <color name="pastel_thursday">#FFF8D7</color>  <!-- amarelo claro -->
+    <color name="pastel_friday">#FAD7FF</color>    <!-- lilás claro -->
+    <color name="pastel_saturday">#FFE8D7</color>  <!-- laranja claro -->
+    <color name="pastel_sunday">#D7FFF3</color>    <!-- verde-água claro -->
+
+    <!-- Cores para textos -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
+
