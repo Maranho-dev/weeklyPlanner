@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 
 public class Cadastre_se extends AppCompatActivity implements View.OnClickListener {
-    EditText txtCadNome, txtCadCPF, txtCadEmail, txtCadSenha, txtCadConfSenha;
+    EditText txtCadNome, txtCadCPF, txtCadEmail, txtCadSenha;
     Button btCadSalvar;
 
 
@@ -26,7 +26,6 @@ public class Cadastre_se extends AppCompatActivity implements View.OnClickListen
         txtCadCPF       = findViewById(R.id.txtCadCPF);
         txtCadEmail     = findViewById(R.id.txtCadEmail);
         txtCadSenha     = findViewById(R.id.txtCadSenha);
-        txtCadConfSenha = findViewById(R.id.txtCadConfSenha);
         btCadSalvar     = findViewById(R.id.btCadSalvar);
 
 
@@ -40,7 +39,6 @@ public class Cadastre_se extends AppCompatActivity implements View.OnClickListen
         String _cpf   = txtCadCPF.getText().toString();
         String _email = txtCadEmail.getText().toString();
         String _senha = txtCadSenha.getText().toString();
-        String _confsenha = txtCadConfSenha.getText().toString();
         String msg = "";
         if (_nome.isEmpty()){
             msg = "O campo NOME deve ser preenchido!";
@@ -58,14 +56,8 @@ public class Cadastre_se extends AppCompatActivity implements View.OnClickListen
                         msg = "O campo SENHA deve ser preenchido!";
                         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
                     }else{
-                        if (_confsenha.isEmpty()){
-                            msg = "O campo CONFIRMA SENHA deve ser preenchido!";
-                            Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
-                        }else{
-                            if(!_senha.equals(_confsenha)) {
-                                msg = "Os campos SENHA e CONFIRMA SENHA devem ser iguais!";
-                                Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
-                            }else{
+
+
                                 BancoControllerUsuarios bd = new BancoControllerUsuarios(getBaseContext());
                                 String resultado;
 
@@ -75,12 +67,19 @@ public class Cadastre_se extends AppCompatActivity implements View.OnClickListen
 
                                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
                                 limpar();
-                            }
-                        }
+
+                                 Intent intent = new Intent(this, Login.class);
+                                 startActivity(intent);
+                                 finish();
+
+
                     }
                 }
             }
         }
+    }
+
+    private void startActivity(Intent intent) {
     }
 
     public void limpar(){
@@ -88,6 +87,6 @@ public class Cadastre_se extends AppCompatActivity implements View.OnClickListen
         txtCadCPF.setText("");
         txtCadEmail.setText("");
         txtCadSenha.setText("");
-        txtCadConfSenha.setText("");
+
     }
 }
