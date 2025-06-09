@@ -17,6 +17,7 @@ public class Config extends AppCompatActivity {
     private static final String PREFS_NAME = "AppPrefs";
     private static final String KEY_NOTIFICATIONS = "notifications_enabled";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
