@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Título com botão de configurações -->
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,10 +37,7 @@
                 android:tint="@color/white"/>
         </LinearLayout>
 
-        <!-- Grade com os 7 dias -->
-        <!-- (seu conteúdo original permanece aqui sem alterações) -->
-
-        <!-- ...todo o resto do layout está inalterado... -->
+       
         
     </LinearLayout>
 </ScrollView>
